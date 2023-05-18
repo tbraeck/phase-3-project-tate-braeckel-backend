@@ -7,20 +7,20 @@ class ApplicationController < Sinatra::Base
       end
     
       get '/subjects/:id' do
-    subject = Subject.find(id: params[:id])
-    
+    subject = Subject.find(params[:id])
+    subject.to_json
     end     
 
       post "/resources/:id" do 
-   user_new_drawing = User.find_by(id: params[:id])
-   if user_new_drawing.to_json(include: :drawings)
+   new_resource = Resource.find_by(params[:id])
+   if new_resource.to_json(include: :subjects)
    else
     "404 - User not found"
   end
 end
     
       delete "/resources/:id" do 
-        deleteResource = Resource.find(params[:id])
+        delete_resource = Resource.find(params[:id])
         deleteResource.destroy
         deleteResource.to_json
       end
@@ -41,11 +41,11 @@ end
     
       end
     
-    #   get "/drawings/:id" do
+      get "/resources/:id" do
     
-    #     drawing = Drawing.find(params[:id])
-    #     drawing.to_json
+        resource = Resource.find(params[:id])
+        resource.to_json
     
-    #   end
+      end
 
 end
