@@ -11,6 +11,11 @@ class ApplicationController < Sinatra::Base
     subject.to_json
     end     
 
+    get '/subjects/:name' do 
+subject = Subject.find(params[:name])
+subject.tojson
+    end
+
       post "/resources" do 
    new_resource = Resource.create(
     name: params[:name],

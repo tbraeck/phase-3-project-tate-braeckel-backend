@@ -11,25 +11,30 @@ puts "🌱 Seeding things..."
 
 Subject.create!([{
   name: "Art",
- description: "blach blah"
+ description: "blach blah",
+ link: "http://localhost:3000/subjects/art"
 },
 {
   name: "Language Arts",
-  description: "blach blah"
+  description: "blach blah",
+  link: "http://localhost:3000/subjects/language_arts"
 },
 {
   name: "Science",
-  description: "blach blah"
+  description: "blach blah",
+  link: "http://localhost:3000/subjects/Science"
  
 },
 {
   name: "Theatre",
-  description: "blach blah"
+  description: "blach blah",
+  link: "http://localhost:3000/subjects/theatre"
 
 },
 {
   name: "Drama",
-  description: "blach blah"
+  description: "blach blah",
+  link: "http://localhost:3000/subjects/drama"
  
 }
 ])
