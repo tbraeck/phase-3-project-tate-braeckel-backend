@@ -11,18 +11,21 @@ class ApplicationController < Sinatra::Base
     subject.to_json
     end     
 
-      post "/resources/:id" do 
-   new_resource = Resource.find_by(params[:id])
-   if new_resource.to_json(include: :subjects)
-   else
-    "404 - User not found"
-  end
+      post "/resources" do 
+   new_resource = Resource.create(
+    name: params[:name],
+    description: params[:description],
+    url: params[:url],
+    subject_id: params[:subject_id]
+   )
+   new_resource.to_json
+   
 end
     
       delete "/resources/:id" do 
-        delete_resource = Resource.find(params[:id])
+        deleteResource = Resource.find(params[:id])
         deleteResource.destroy
-        deleteResource.to_json
+        # deleteResource.to_json
       end
     
     #   patch '/users/:id' do 
