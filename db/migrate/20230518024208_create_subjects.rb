@@ -5,7 +5,7 @@ class CreateSubjects < ActiveRecord::Migration[6.1]
 
       t.string :name
       t.string :description
-      t.string :link
+      t.string :url
       t.string :resources
       t.timestamps
 

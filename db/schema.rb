@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2023_05_18_024219) do
   create_table "resources", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "url"
+    t.text "url"
     t.integer "subject_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2023_05_18_024219) do
   create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "link"
+    t.string "url"
     t.string "resources"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

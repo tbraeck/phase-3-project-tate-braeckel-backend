@@ -4,7 +4,7 @@ class CreateResources < ActiveRecord::Migration[6.1]
 
       t.string :name
       t.string :description
-      t.string :url
+      t.text :url
       t.integer :subject_id
       t.timestamps
 
