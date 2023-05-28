@@ -11,24 +11,24 @@ puts "🌱 Seeding things..."
 
 Subject.create!([{
   name: "Art",
- description: "blach blah",
- url: "http://localhost:3000/subjects/art"
+ description: "blach blah"
+
 },
 {
   name: "Language Arts",
-  description: "blach blah",
-  url: "http://localhost:3000/subjects/language_arts"
+  description: "blach blah"
+ 
 },
 {
   name: "Science",
-  description: "blach blah",
-  url: "http://localhost:3000/subjects/Science"
+  description: "blach blah"
+ 
  
 },
 {
   name: "Theatre",
-  description: "blach blah",
-  url: "http://localhost:3000/subjects/theatre"
+  description: "blach blah"
+
 
 },
 {
@@ -46,28 +46,28 @@ Subject.create!([{
                           {
                             name: "the thingy resource",
                             description: "blah blah blah",
-                            url: "www.faker.com",
+                            url: "https://tenor.com/view/cat-cute-gif-19389258",
                             subject_id: 1
                            
                           },
                           {
                             name: "the thingy resource",
                             description: "blah blah blah",
-                            url: "www.faker.com",
+                            url: "https://tenor.com/view/cat-cute-gif-19389258",
                             subject_id: 2
 
                            
                           }, {
                             name: "the thingy resource",
                             description: "blah blah blah",
-                            url: "www.faker.com",
+                            url: "https://tenor.com/view/cat-cute-gif-19389258",
                             subject_id: 3
 
                            
                           }, {
                             name: "the thingy resource",
                             description: "blah blah blah",
-                            url: "www.faker.com",
+                            url: "https://tenor.com/view/cat-cute-gif-19389258",
                             subject_id: 4
 
                           }
